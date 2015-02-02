@@ -7,7 +7,7 @@ import Foundation
 // The parameter weekday is True if it is a weekday, and the parameter vacation is True if we are on vacation. We sleep in if it is not a weekday or we're on vacation. Return True if we sleep in.
 
 func sleepIn(weekday:Bool, vacation:Bool) -> Bool{
-    return weekday || vacation
+    return !weekday || vacation
 }
 
 println(sleepIn(false, false)) //true
@@ -41,3 +41,20 @@ func diff21(n: Int) -> Int {
 println(diff21(19)) //2
 println(diff21(10)) //11
 println(diff21(21)) //0
+
+// NearHundred
+//Given an int n, return true if it is within 10 of 100 or 200. Note: Math.abs(num) computes the absolute value of a number.
+
+func nearHundred(n: Int32) -> Bool {
+    if((abs(n-100) <= 10) || (abs(n-200) <= 10)){
+        return true
+    }
+    else {
+        return false
+    }
+}
+
+println(nearHundred(93)) //true
+println(nearHundred(90)) //true
+println(nearHundred(89)) //false
+
