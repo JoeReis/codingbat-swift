@@ -58,3 +58,19 @@ println(nearHundred(93)) //true
 println(nearHundred(90)) //true
 println(nearHundred(89)) //false
 
+//Front3
+//Given a string, we'll say that the front is the first 3 chars of the string. If the string length is less than 3, the front is whatever is there. Return a new string which is 3 copies of the front.
+
+func front3(str: String) -> String {
+    if countElements(str) < 3 {
+        return str
+    }
+    else{
+        let substring = str.substringWithRange(Range(start:str.startIndex, end:advance(str.startIndex, 3)))
+        return substring + substring + substring
+    }
+}
+
+front3("Java") //JavJavJav
+front3("Chocolate") //ChoChoCho
+front3("ab") //ab
