@@ -39,3 +39,14 @@ func firstLast6(nums: [Int]) -> Bool {
 firstLast6([1,2,6]) //true
 firstLast6([6,1,2,3]) //true
 firstLast6([13,6,1,2,3]) //false
+
+// #2 CommonEnd
+// Given 2 arrays of ints, a and b, return True if they have the same first element or they have the same last element. Both arrays will be length 1 or more.
+
+func commonEnd(a: [Int], b: [Int]) -> Bool {
+   return (a.first == b.first) || (a.last == b.last)
+}
+
+commonEnd([1,2,3], [7,3]) //true
+commonEnd([1,2,3], [7,3,2]) //false
+commonEnd([1,2,3], [1,3]) //true
