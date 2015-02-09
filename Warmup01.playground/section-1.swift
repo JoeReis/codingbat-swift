@@ -85,3 +85,19 @@ func makes10(a: Int, b: Int) -> Bool {
 makes10(9,10) //true
 makes10(9,9) //false
 makes10(1,9) //true
+
+// SumDouble
+// Given two int values, return their sum. Unless the two values are the same, then return double their sum.
+
+func sumDouble(a: Int, b: Int) -> Int {
+    if(a == b){
+        return 2*(a+b)
+    }
+    else {
+        return a + b
+    }
+}
+
+sumDouble(1, 2) //3
+sumDouble(3, 2) //5
+sumDouble(2, 2) //8
