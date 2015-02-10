@@ -101,3 +101,22 @@ func sumDouble(a: Int, b: Int) -> Int {
 sumDouble(1, 2) //3
 sumDouble(3, 2) //5
 sumDouble(2, 2) //8
+
+//PosNeg
+// Given 2 int values, return True if one is negative and one is positive. Except if the parameter "negative" is True, then return True only if both are negative.
+
+func posNeg(a: Int, b: Int, negative: Bool) -> Bool {
+    if(negative == true && (a < 0 && b < 0)){
+        return true
+    }
+    else if((a < 0 && b > 0) | (a > 0 && b < 0)){
+        return true
+    }
+    else {
+        return false
+    }
+}
+
+posNeg(1,-1,false) //true
+posNeg(-1,1,false) //true
+posNeg(-4, -5, true) //true
