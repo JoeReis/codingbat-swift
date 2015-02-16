@@ -62,7 +62,7 @@ nearHundred(89) //false
 //Given a string, we'll say that the front is the first 3 chars of the string. If the string length is less than 3, the front is whatever is there. Return a new string which is 3 copies of the front.
 
 func front3(str: String) -> String {
-    if countElements(str) < 3 {
+    if count(str) < 3 {
         return str
     }
     else{
@@ -109,7 +109,7 @@ func posNeg(a: Int, b: Int, negative: Bool) -> Bool {
     if(negative == true && (a < 0 && b < 0)){
         return true
     }
-    else if((a < 0 && b > 0) | (a > 0 && b < 0)){
+    else if((a < 0 && b > 0) || (a > 0 && b < 0)){
         return true
     }
     else {
