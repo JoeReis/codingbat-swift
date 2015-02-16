@@ -102,7 +102,7 @@ sumDouble(1, 2) //3
 sumDouble(3, 2) //5
 sumDouble(2, 2) //8
 
-//PosNeg
+// PosNeg
 // Given 2 int values, return True if one is negative and one is positive. Except if the parameter "negative" is True, then return True only if both are negative.
 
 func posNeg(a: Int, b: Int, negative: Bool) -> Bool {
@@ -120,3 +120,22 @@ func posNeg(a: Int, b: Int, negative: Bool) -> Bool {
 posNeg(1,-1,false) //true
 posNeg(-1,1,false) //true
 posNeg(-4, -5, true) //true
+
+// NotString
+// Given a string, return a new string where "not " has been added to the front. However, if the string already begins with "not", return the string unchanged. 
+
+func notString(str: String) -> String {
+    
+    //sidenote: still haven't found an easier way to do substring. Very verbose. - JR, 2/15/2015
+    if(count(str) < 3 || str.substringWithRange(Range(start:str.startIndex, end:advance(str.startIndex, 3))) == "not") {
+        return str
+    }
+    else {
+        return "not " + str
+    }
+}
+
+notString("candy") //not candy
+notString("x") // not x
+notString("not bad") //bad
+
