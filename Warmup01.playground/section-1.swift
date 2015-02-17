@@ -139,3 +139,20 @@ notString("candy") //not candy
 notString("x") // not x
 notString("not bad") //bad
 
+// HasTeen
+// We'll say that a number is "teen" if it is in the range 13..19 inclusive. Given 3 int values, return true if 1 or more of them are teen.
+
+func hasTeen(a: Int, b: Int, c: Int) -> Bool {
+    if((a >= 13 && a <= 19) || (b >= 13 && b <= 19) || (c >= 13 && c <= 19)){
+        return true
+    }
+    else {
+        return false
+    }
+}
+
+hasTeen(13, 20, 10) //true
+hasTeen(20, 19, 10) //true
+hasTeen(20, 10, 13) //true
+hasTeen(1, 2, 3) //false
+
