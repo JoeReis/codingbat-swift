@@ -156,3 +156,14 @@ hasTeen(20, 19, 10) //true
 hasTeen(20, 10, 13) //true
 hasTeen(1, 2, 3) //false
 
+
+//MissingChar
+//Given a non-empty string and an int n, return a new string where the char at index n has been removed. The value of n will be a valid index of a char in the original string (i.e. n will be in the range 0..len(str)-1 inclusive).
+
+func missingChar(str:NSString, n:Int) -> String {
+    return str.substringToIndex(n) + str.substringFromIndex(n+1)
+}
+
+missingChar("kitten", 1) //ktten
+missingChar("kitten", 0) //itten
+missingChar("kitten", 4) //kittn
