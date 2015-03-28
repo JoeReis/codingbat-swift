@@ -9,7 +9,7 @@ func stringTimes(str: String, n: Int) -> String {
     return result
 }
 
-stringTimes("Hi", 3)
+stringTimes("Hi", 3) //HiHiHi
 
 
 
